@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pantry-to-Plate</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css"> -->
+
+</head>
+<body>
+   <!--TOP Nav -->
+  <nav>
+       <div class="row  topNav">
+     <div class="col-sm-4 logo">
+      <img src="assets/images/logo.png">
+     </div>
+     <div class="col-sm-8">
+       <button class="refresh"><a href="https://mapipina.github.io/what-should-i-eat/">New Recipe</a></button>
+
+     </div>
+
+    <div class="fb-login-button col-sm-8" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+       </div>
+  </nav>
+
+  <!--TOP NAV END-->
+
+  <div class="container">
+    <div class="row" id="mainContent">
+      <!--recipe generates here-->
+      <div class="col-md-12 new">
+        <div class="row" id="recipeArea">
+          <div class="greeting">
+            <h3>Let's get cookin'!</h3>
+            <p>Just add your ingredients and we instantly finds matching recipes from the most popular cooking websites!</p>
+            <p>To get started, choose your ingredients from the categories on the right</p>
+          </div>
+ 
+          <!-- Result will Populate here-->
+      </div>
+    </div>
+
+        <!--buttons food-->
+      <aside class="row IngredCat">
+        <div class="col-sm-4">
+        <div class="row"><h3>Choose Your Ingredients</h3></div>
+        <div class="accordion"><img src="assets/images/Vegetables.png">Vegetables</div>
+          <div class="panel">
+              <input type="checkbox" name="vehicle" value="Carrots"> Carrots
+              <input type="checkbox" name="vehicle" value="Corn"> Corn
+              <input type="checkbox" name="vehicle" value="Garlic"> Garlic
+              <input type="checkbox" name="vehicle" value="Kale"> Kale
+              <input type="checkbox" name="vehicle" value="Onion"> Onion
+              <input type="checkbox" name="vehicle" value="Potato"> Potato
+              <input type="checkbox" name="vehicle" value="Tomato"> Tomato
+            </div>
+            <br/>
+          <div class="accordion"><img src="assets/images/Baking & Grains.png">Grains</div>
+          <div class="panel">
+               
+              <input type="checkbox" name="vehicle" value="Bread"> Bread
+              <input type="checkbox" name="vehicle" value="Flour"> Flour
+              <input type="checkbox" name="vehicle" value="Pasta"> Pasta
+              <input type="checkbox" name="vehicle" value="Rice"> Rice   
+              <input type="checkbox" name="vehicle" value="Baking Powder">  Baking Powder
+              <input type="checkbox" name="vehicle" value="Tortilla">Tortilla
+              <br/>
+            </div>
+            <br/>
+              <div class="accordion"><img src="assets/images/Dairy.png">Dairy</div>
+              <div class="panel">
+
+               <input type="checkbox" name="vehicle" value="Butter"> Butter
+               <input type="checkbox" name="vehicle" value="Cheddar Cheese">Cheddar Cheese
+               <input type="checkbox" name="vehicle" value="Eggs"> Eggs
+               <input type="checkbox" name="vehicle" value="Milk"> Milk
+               <input type="checkbox" name="vehicle" value="Provolone"> Provolone
+               <input type="checkbox" name="vehicle" value="Sour Cream"> Sour Cream
+               <input type="checkbox" name="vehicle" value="Yogurt"> Yogurt <br/>
+          </div>
+            <br/>
+          <div class="accordion"><img src="assets/images/Meats.png">Meats</div>
+          <div class="panel">
+              <input type="checkbox" name="vehicle" value="bacon">Bacon
+              <input type="checkbox" name="vehicle" value="Chicken">Chicken
+              <input type="checkbox" name="vehicle" value="Ground Beef">Ground Beef
+              <input type="checkbox" name="vehicle" value="Pork">Pork
+              <input type="checkbox" name="vehicle" value="Steak">Steak
+              <input type="checkbox" name="vehicle" value="Turkey">Turkey
+           </div>
+          
+          <input class="submit"  id="FormButton" type="submit" value="Submit">
+
+      </aside>
+  </div>
+
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+</html>
